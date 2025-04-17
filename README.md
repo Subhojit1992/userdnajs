@@ -1,4 +1,4 @@
-# UserDNA-Community
+# UserDNA JS - Community Edition
 
 A lightweight, modular fingerprint generator library for creating unique user identifiers in web applications.
 

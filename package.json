@@ -1,7 +1,7 @@
 {
-  "name": "userdna-community",
+  "name": "userdnajs",
   "version": "0.1.0",
-  "description": "Community edition of fingerprint generator library for creating unique user identifiers",
+  "description": "Community edition of UserDNA JS. A fingerprint generator library for creating unique user identifiers",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
@@ -25,9 +25,14 @@
     "analytics",
     "visitor-tracking",
     "visitor-identification",
-    "browser-fingerprint"
+    "browser-fingerprint",
+    "userdna",
+    "userdna-js",
+    "userdna-js-community",
+    "userdna-js-community-edition",
+    "userdnajs"
   ],
-  "author": "subhojit1992",
+  "author": "Subhojit1992",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
@@ -45,12 +50,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subhojit992/userdna.git"
+    "url": "git+https://github.com/Subhojit1992/userdnajs.git"
   },
   "bugs": {
-    "url": "https://github.com/subhojit992/userdna/issues"
+    "url": "https://github.com/Subhojit1992/userdnajs/issues"
   },
-  "homepage": "https://github.com/subhojit992/userdna#readme",
+  "homepage": "https://github.com/Subhojit1992/userdnajs#readme",
   "engines": {
     "node": ">=12"
   }
