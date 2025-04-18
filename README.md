@@ -1,5 +1,6 @@
-# UserDNA JS - Community Edition
-
+# UserDNA JS
+**[community-edition]**
+ 
 A lightweight, modular fingerprint generator library for creating unique user identifiers in web applications.
 
 ## Features
@@ -18,25 +19,25 @@ A lightweight, modular fingerprint generator library for creating unique user id
 ### NPM
 
 ```bash
-npm install userdna-community
+npm install userdnajs
 ```
 
 ### Yarn
 
 ```bash
-yarn add userdna-community
+yarn add userdnajs
 ```
 
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/userdna-community/dist/index.umd.js"></script>
+<script src="https://unpkg.com/userdnajs@0.1.2/dist/index.umd.min.js"></script>
 ```
 
 ## Quick Start
 
 ```javascript
-import { createUserDNA } from 'userdna-community';
+import { createUserDNA } from 'userdnajs';
 
 // Create a new instance with default options
 const userDNA = createUserDNA();
@@ -57,7 +58,7 @@ userDNA.getFingerprint().then(result => {
 UserDNA-Community is configurable with basic options:
 
 ```javascript
-import { createUserDNA } from 'userdna-community';
+import { createUserDNA } from 'userdnajs';
 
 const userDNA = createUserDNA({
   // What components to include in the fingerprint
