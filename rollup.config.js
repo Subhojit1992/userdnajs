@@ -4,8 +4,14 @@ import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
+const basePlugins = [
+  resolve(),
+  commonjs(),
+  typescript({ tsconfig: './tsconfig.json' })
+];
+
 export default [
-  // UMD build (for browsers)
+  // UMD builds
   {
     input: 'src/index.ts',
     output: {
@@ -15,34 +21,59 @@ export default [
       sourcemap: true,
       exports: 'auto'
     },
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-      terser()
-    ]
+    plugins: basePlugins
   },
-  // ESM build (for modern bundlers) and CJS build (for Node.js)
   {
     input: 'src/index.ts',
-    output: [
-      {
-        file: pkg.module,
-        format: 'es',
-        sourcemap: true,
-        exports: 'named'
-      },
-      {
-        file: pkg.main,
-        format: 'cjs',
-        sourcemap: true,
-        exports: 'named'
-      }
-    ],
-    plugins: [
-      typescript({ tsconfig: './tsconfig.json' }),
-      resolve(),
-      commonjs()
-    ]
+    output: {
+      name: 'UserDNACommunity',
+      file: pkg.browser.replace('.js', '.min.js'),
+      format: 'umd',
+      sourcemap: true,
+      exports: 'auto'
+    },
+    plugins: [...basePlugins, terser()]
+  },
+  // ESM build
+  {
+    input: 'src/index.ts',
+    output: {
+      file: pkg.module,
+      format: 'es',
+      sourcemap: true,
+      exports: 'named'
+    },
+    plugins: basePlugins
+  },
+  {
+    input: 'src/index.ts',
+    output: {
+      file: pkg.module.replace('.js', '.min.js'),
+      format: 'es',
+      sourcemap: true,
+      exports: 'named'
+    },
+    plugins: [...basePlugins, terser()]
+  },
+  // CJS build
+  {
+    input: 'src/index.ts',
+    output: {
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: true,
+      exports: 'named'
+    },
+    plugins: basePlugins
+  },
+  {
+    input: 'src/index.ts',
+    output: {
+      file: pkg.main.replace('.js', '.min.js'),
+      format: 'cjs',
+      sourcemap: true,
+      exports: 'named'
+    },
+    plugins: [...basePlugins, terser()]
   }
 ]; 
