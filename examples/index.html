@@ -1,11 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/dna-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UserDNA.js - Browser Fingerprinting</title>
-    <meta name="description" content="Generate unique visitor IDs with browser fingerprinting technology" />
+    <meta
+      name="description"
+      content="Generate unique visitor IDs with browser fingerprinting technology"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9KW9HNTY2H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9KW9HNTY2H");
+    </script>
   </head>
   <body>
     <div id="root"></div>
