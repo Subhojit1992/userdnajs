@@ -3,6 +3,9 @@
  
 A lightweight, modular fingerprint generator library for creating unique user identifiers in web applications.
 
+[![npm version](https://img.shields.io/npm/v/userdnajs.svg)](https://www.npmjs.com/package/userdnajs)
+[![License](https://img.shields.io/npm/l/userdnajs.svg)](LICENSE)
+
 ## Features
 
 - **Simple User Identification**: Generate consistent fingerprints for returning visitors
@@ -31,7 +34,7 @@ yarn add userdnajs
 ### CDN
 
 ```html
-<script src="https://unpkg.com/userdnajs@0.1.2/dist/index.umd.min.js"></script>
+<script src="https://unpkg.com/userdnajs@0.1.4/dist/index.umd.min.js"></script>
 ```
 
 ## Demo and Doc
