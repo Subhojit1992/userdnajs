@@ -1,6 +1,6 @@
 {
   "name": "userdnajs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Community edition of UserDNA JS. A fingerprint generator library for creating unique user identifiers",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
